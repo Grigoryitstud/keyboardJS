@@ -1,0 +1,92 @@
+#keyboard {
+    max-width: 850px;
+    margin: 150px auto;
+    display: grid;
+    grid-template-columns: repeat(15, 50PX);
+    grid-template-rows: repeat(7, 50PX);    
+    gap: 13px 6px;
+    padding: 5px;
+}
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    background-color: #3a424e;
+    color: azure;
+    border-radius: 9px;
+}
+.placeToWatch {
+    grid-column: 1 / 16;
+    grid-row: 1 / 3;
+    padding: 5px;
+    /* display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center; */
+    font-size: 23px;
+    border: 1px solid #3a424e;
+    color: rgb(4, 12, 12);
+}
+.keyBac {
+    grid-column: 14 / 16;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    background-color: #1c232e;
+    color: #7d7f80;
+    border-radius: 5px;
+}
+.keyBl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    background-color: #1c232e;
+    color: #7d7f80;
+    border-radius: 5px;
+    
+}
+.keyBll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    background-color: #1c232e;
+    color: azure;
+    border-radius: 5px;
+    
+}
+.keyCap {
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    background-color: #1c232e;
+    color: #7d7f80;
+    border-radius: 5px;
+}
+.keyPr {
+    grid-column: 4 / 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    background-color: #3a424e;
+    color: #7d7f80;
+    border-radius: 5px;
+}
+.keyShift {
+    margin-right: 30px;
+    margin-bottom: 25px;
+    position: absolute;
+    font-size: 14px;
+    color: beige;
+}
+.keyTransform {
+    transform: rotate(-20deg);
+    font-size: 19px;
+    font-weight: 400;
+}
