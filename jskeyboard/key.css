@@ -90,3 +90,7 @@
     font-size: 19px;
     font-weight: 400;
 }
+.active {
+    border-radius: 15px;
+    background-color: blueviolet;
+}
