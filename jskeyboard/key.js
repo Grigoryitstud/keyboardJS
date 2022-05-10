@@ -5,6 +5,7 @@ const keyboardShift = ['!', '@', '#', '$', '%', ':', '?', '*', '(', ')', '_', '+
 KEYS = [192, 49, 50, 51, 52, 53, 54, 55, 56, 57, 48, 189, 187, 8, 9, 81, 87, 69, 82, 84, 89, 85, 73, 79,
      80, 219, 221, 220, 46, 20, 65, 83, 68, 70, 71, 72, 74, 75, 76, 186, 222, 13, 16, 220, 90, 88, 67, 86, 66,
       78, 77, 190, 188, 191, 38, 16, 17, 91, 18, 32, 18, 17, 37, 40, 39];
+const keyRus = ['Й', 'Ц', 'У', 'К', 'Е', 'Н', 'Г', 'Ш', 'Щ', 'З', 'Х', 'Ъ', 'Ф','Ы', 'В', 'А', 'П', 'Р', 'О', 'Л', 'Д', 'Ж', 'Э', 'Я', 'Ч', 'С', 'М', 'И', 'Т', 'Ь', 'Б', 'Ю'];
 
 
 function init() {
@@ -89,22 +90,28 @@ function init() {
             out += '<div class="keyBl" data = "' + KEYS[i-1] + '" >' + keyboard[i] + '</div>' + '</div>'; 
         } else
         
-        {out += '<div class="key" data = "' + KEYS[i-1] + '">' + keyboard[i] + '</div>';}
+        {out += '<div class="key" data = "' + KEYS[i-1] + '">' + keyboard[i] + '</div>';};
     }
     document.querySelector('body').innerHTML += out;
     // document.querySelector('#keyboard :nth-child(15)').classList.remove('keyTwo');
     // String.fromKeyCode(KEYS[i-1])
+    // let dobleKey = []; 
 
-    document.addEventListener('keydown', (event) =>{        
-        console.log(event)
-        document.querySelector('[data = "' + event.keyCode + '"]').classList.add('active')
-    })
-    document.addEventListener('keyup', (event) =>{
-        document.querySelector('[data = "' + event.keyCode + '"]').classList.remove('active')
-    })
 
 }
 init()
+
+document.addEventListener('keydown', (event) =>{ 
+    // dobleKey.push(event.keyCode)            
+    console.log(event.keyCode)
+    document.querySelector('[data = "' + event.keyCode + '"]').classList.add('active')
+    // if((dobleKey == [16, 18]) || (dobleKey == [18, 16])) {
+    //     keyView = keyRus[j];
+    // }
+})
+document.addEventListener('keyup', (event) =>{
+    document.querySelector('[data = "' + event.keyCode + '"]').classList.remove('active')
+})
 
 
 
